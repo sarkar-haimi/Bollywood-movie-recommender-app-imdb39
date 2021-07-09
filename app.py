@@ -6,8 +6,8 @@ import requests
 
 st.header('Bollywood Movie Recommendation System')
 
-movies=pd.read_pickle(open('model/bollywoodmovie_list.pkl','rb'))
-similarity=pickle.load(open('model/moviesimilarity.pkl','rb'))
+movies=pd.read_pickle(open('bollywoodmovie_list.pkl','rb'))
+similarity=pickle.load(open('moviesimilarity.pkl','rb'))
 
 def fetch_poster(movie_title):
     url="https://www.omdbapi.com/?apikey=162c47f3&t={}".format(movie_title)
